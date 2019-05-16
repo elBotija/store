@@ -47,13 +47,13 @@ class Router extends Component {
                 <Header/>
                 <Navegacion/> 
                 <Switch>
-                    <Route exact path={["/","/productos"]} render={ () => (
+                    <Route exact path={[`${process.env.PUBLIC_URL}/`,`${process.env.PUBLIC_URL}/productos`]} render={ () => (
                         <Productos 
                             productos={productos} 
                             busquedaProducto={this.busquedaProducto}
                         />
                     )}/>
-                    <Route exact path="/producto/:productoId" render={ (props) => {
+                    <Route exact path={`${process.env.PUBLIC_URL}/producto/:productoId`} render={ (props) => {
                         let idProducto = props.match.params.productoId
                         return(
                             <DetalleProducto 
@@ -61,8 +61,8 @@ class Router extends Component {
                             />
                         )
                     }}/>
-                    <Route exact path="/nosotros" component={Nosotros}/>
-                    <Route exact path="/contacto" component={Contacto}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/nosotros`} component={Nosotros}/>
+                    <Route exact path={`${process.env.PUBLIC_URL}/contacto`} component={Contacto}/>
                     <Route component={Error}/>
                 </Switch>
 

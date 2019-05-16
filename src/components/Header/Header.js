@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
     return(
         <header>
-            <Link to={'/'}>
+            <Link to={`${process.env.PUBLIC_URL}/`}>
                 <img src="/img/logo.png" alt="logo"/>
             </Link>
         </header>

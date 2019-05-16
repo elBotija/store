@@ -7,7 +7,7 @@ const Producto = (props) => {
         <li>
             <img src={`/img/${imagen}.png`} alt={nombre} />
             <p>{nombre} <span>$ {precio}</span></p> 
-            <Link to={`/producto/${id}`}>Mas info</Link>
+            <Link to={`${process.env.PUBLIC_URL}/producto/${id}`}>Mas info</Link>
         </li>
     )
 }
