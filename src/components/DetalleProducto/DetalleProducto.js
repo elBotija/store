@@ -7,7 +7,7 @@ const DetalleProducto = (props) => {
     return ( 
       <div className="info-producto">
         <div className="imagen">
-            <img src={`../img/${imagen}.png`} alt={nombre} />
+            <img src={`${process.env.PUBLIC_URL}/img/${imagen}.png`} alt={nombre} />
         </div>
         <div className="info">
             <h2>{nombre}</h2>
